@@ -46,15 +46,15 @@
             </meta>
         </property>
 
-        <property name="card-size" type="single_select" colspan="4">
+        <property name="cardSize" type="single_select" colspan="4">
             <meta><title lang="en">card size</title></meta>
             <tag name="sulu.block_preview" priority="128"/>
             <params>
-                <param name="default_value" value="1x1"/>
+                <param name="default_value" value="size-1x1"/>
                 <param name="values" type="collection">
-                    <param name="1x1"><meta><title lang="en">1x1</title></meta></param>
-                    <param name="2x1"><meta><title lang="en">2x1</title></meta></param>
-                    <param name="2x2"><meta><title lang="en">2x2</title></meta></param>
+                    <param name="size-1x1"><meta><title lang="en">1x1</title></meta></param>
+                    <param name="size-2x1"><meta><title lang="en">2x1</title></meta></param>
+                    <param name="size-2x2"><meta><title lang="en">2x2</title></meta></param>
                 </param>
             </params>
         </property>

@@ -1,11 +1,17 @@
 .article-grid {
   width: 100%;
   max-width: $containerMaxWidth;
-  padding: 0 $padding;
   margin: auto;
   display: grid;
-  gap: 2rem;
-  grid-template-columns: repeat(auto-fill,minmax(20rem,1fr));
-  grid-auto-rows: 28rem;
+  gap: $gap;
+  //grid-template-columns: repeat(auto-fill,minmax(20rem,1fr));
+  grid-template-columns: 1fr;
+  grid-auto-rows: 20rem;
   grid-auto-flow: dense;
+  @media (min-width: 40rem) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (min-width: $tablet) {
+    grid-template-columns: repeat(auto-fill,minmax(20rem,1fr));
+  }
 }

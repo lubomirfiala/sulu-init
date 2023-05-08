@@ -26,5 +26,20 @@ services:
             - '../src/Entity/'
             - '../src/Kernel.php'
 
+    App\Sulu\Controller\Website\:
+        resource: '../src/Sulu/Controller/Website'
+        tags: [ 'controller.service_arguments', { name: 'sulu.context', context: 'website' } ]
+
+    App\Sulu\Controller\Admin\:
+        resource: '../src/Sulu/Controller/Admin'
+        tags: [ 'controller.service_arguments', { name: 'sulu.context', context: 'admin' } ]
+
+    Sulu\Component\Content\Types\ResourceLocator\Strategy\ResourceLocatorStrategyPoolInterface: '@sulu.content.resource_locator.strategy_pool'
+    Sulu\Component\DocumentManager\DocumentManagerInterface: '@sulu_document_manager.document_manager'
+    Sulu\Component\Content\Mapper\ContentMapperInterface: '@sulu.content.mapper'
+    Sulu\Bundle\WebsiteBundle\Resolver\StructureResolverInterface: '@sulu_website.resolver.structure'
+    Sulu\Component\Webspace\Analyzer\RequestAnalyzer: '@sulu_core.webspace.request_analyzer'
+    Sulu\Bundle\WebsiteBundle\Navigation\NavigationMapper: '@sulu_website.navigation_mapper'
+
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones

@@ -1,5 +1,4 @@
 .article-card {
-  flex-grow: 1;
   background: #ffffff;
   color: #333333;
   text-decoration: none;
@@ -9,6 +8,7 @@
   gap: 1rem;
   grid-template-rows: 1fr auto;
   transition: all .2s;
+  position: relative;
   &:hover {
     cursor: pointer;
     top: -1px;
@@ -40,6 +40,15 @@
     * {
       padding-left: 0;
       padding-right: 0;
+    }
+  }
+  @media (min-width: 40rem) {
+    &.size-2x1 {
+      grid-column: auto / span 2;
+    }
+    &.size-2x2 {
+      grid-column: auto / span 2;
+      grid-row: auto / span 2;
     }
   }
 }

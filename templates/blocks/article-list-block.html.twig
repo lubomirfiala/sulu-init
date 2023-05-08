@@ -2,7 +2,7 @@
   <div class="article-grid">
     {% if data.articles is defined %}
       {% for article in data.articles %}
-        <a href="{{ article.content.url }}" class="article-card">
+        <a href="{{ article.content.url }}" class="article-card {{ article.content.cardSize }}">
           {% if article.content.image %}
             <div class="picture">
               <img
@@ -26,7 +26,7 @@
     {% if data.pagination is defined %}
       <div>
         <a
-            href="?x={{ data.pagination.prevPage }}"
+            href="?{{ data.paginationTarget }}={{ data.pagination.prevPage }}"
             class="btn circle primary {{ (data.pagination.currentPage == data.pagination.prevPage) ? 'disabled' : '' }}"
         ><</a>
         {% for page in range(0, data.pagination.lastPage) %}
@@ -37,7 +37,7 @@
             ) %}
             {% if page == data.pagination.lastPage and data.pagination.currentPage < (data.pagination.lastPage - 2) %} ... {% endif %}
             <a
-                href="?x={{ page }}"
+                href="?{{ data.paginationTarget }}={{ page }}"
                 class="btn {{ (page == data.pagination.currentPage)? 'primary' : 'secondary' }}"
             >
               {{ page + 1 }}
@@ -47,7 +47,7 @@
 
         {% endfor %}
         <a
-            href="?x={{ data.pagination.nextPage }}"
+            href="?{{ data.paginationTarget }}={{ data.pagination.nextPage }}"
             class="btn circle primary {{ (data.pagination.currentPage == data.pagination.nextPage) ? 'disabled' : '' }}"
         >></a>
       </div>

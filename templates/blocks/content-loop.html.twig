@@ -18,7 +18,7 @@
     {% elseif block.type == 'button-block' %}
         {% include 'blocks/button-block.html.twig' with { data: block } %}
 
-    {% elseif block.type == 'article-list-block' %}
+    {% elseif block.type == 'page-list-block' %}
       {% if block.template == 'article' %}
         {% include 'blocks/article-list-block.html.twig' with { data: block } %}
       {% endif %}
