@@ -40,6 +40,9 @@ footer {
       }
       .legal {
         font-size: .8rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: $gap;
 
       }
       .actions {
