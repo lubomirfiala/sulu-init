@@ -1,7 +1,7 @@
 <h1>SULU init</h1>
 
 Preconfigured [Sulu](https://sulu.io) installation for a quicker start of new project  
-`symfony 6.2`, `sulu 2.5`
+`symfony 6.2`, `sulu 2.5`, `Vue 2.6`
 
 ## Fist steps:
 - rename default webspace
