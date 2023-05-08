@@ -10,7 +10,7 @@
 
             <type name="image-block">
                 <meta>
-                    <title lang="en">Image</title>
+                    <title lang="en">Image block</title>
                 </meta>
                 <properties>
                     <property name="image" type="single_media_selection">

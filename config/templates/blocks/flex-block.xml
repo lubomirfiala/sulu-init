@@ -10,7 +10,7 @@
 
             <type name="flex-block">
                 <meta>
-                    <title lang="en">Flex</title>
+                    <title lang="en">Flex block</title>
                 </meta>
                 <properties>
                     <property name="justify" type="single_select" colspan="4">

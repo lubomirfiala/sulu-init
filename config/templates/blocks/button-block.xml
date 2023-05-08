@@ -9,7 +9,7 @@
 
             <type name="button-block">
                 <meta>
-                    <title lang="en">button</title>
+                    <title lang="en">Button block</title>
                 </meta>
                 <properties>
                     <property name="text" type="text_line" colspan="4">

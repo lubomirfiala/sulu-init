@@ -1,0 +1,51 @@
+<?xml version="1.0" ?>
+<properties xmlns="http://schemas.sulu.io/template/template"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xmlns:xi="http://www.w3.org/2001/XInclude"
+            xsi:schemaLocation="http://schemas.sulu.io/template/template http://schemas.sulu.io/template/template-1.0.xsd">
+    <block name="content">
+        <types>
+
+
+
+            <type name="container-card-block">
+                <meta>
+                    <title lang="en">Card block</title>
+                </meta>
+                <properties>
+
+                    <block name="content">
+                        <meta>
+                            <title lang="en">Content left</title>
+                        </meta>
+                        <params>
+                            <param name="add_button_text">
+                                <meta>
+                                    <title lang="en">Add content</title>
+                                </meta>
+                            </param>
+                        </params>
+                        <types>
+
+                            <xi:include href="../blocks/container-grid-block.xml" xpointer="xmlns(sulu=http://schemas.sulu.io/template/template)xpointer(/sulu:properties/sulu:block/sulu:types/sulu:type)"/>
+
+                            <xi:include href="../blocks/text-block.xml" xpointer="xmlns(sulu=http://schemas.sulu.io/template/template)xpointer(/sulu:properties/sulu:block/sulu:types/sulu:type)"/>
+
+                            <xi:include href="../blocks/image-block.xml" xpointer="xmlns(sulu=http://schemas.sulu.io/template/template)xpointer(/sulu:properties/sulu:block/sulu:types/sulu:type)"/>
+
+                            <xi:include href="../blocks/flex-block.xml" xpointer="xmlns(sulu=http://schemas.sulu.io/template/template)xpointer(/sulu:properties/sulu:block/sulu:types/sulu:type)"/>
+
+                            <xi:include href="../blocks/button-block.xml" xpointer="xmlns(sulu=http://schemas.sulu.io/template/template)xpointer(/sulu:properties/sulu:block/sulu:types/sulu:type)"/>
+
+                            <xi:include href="../blocks/divider-block.xml" xpointer="xmlns(sulu=http://schemas.sulu.io/template/template)xpointer(/sulu:properties/sulu:block/sulu:types/sulu:type)"/>
+
+                        </types>
+                    </block>
+                </properties>
+            </type>
+
+
+
+        </types>
+    </block>
+</properties>

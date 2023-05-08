@@ -10,13 +10,24 @@
 
             <type name="article-list-block">
                 <meta>
-                    <title lang="en">article list</title>
+                    <title lang="en">Article list block</title>
                 </meta>
                 <properties>
-                    <property name="parent" type="single_page_selection">
+                    <property name="parent" type="single_page_selection" colspan="8">
                         <meta>
                             <title lang="en">Parent</title>
                         </meta>
+                    </property>
+                    <property name="template" type="single_select" colspan="4">
+                        <meta><title lang="en">template</title></meta>
+                        <tag name="sulu.block_preview" priority="128"/>
+                        <params>
+                            <param name="default_value" value="article"/>
+                            <param name="values" type="collection">
+                                <param name="article"><meta><title lang="en">article</title></meta></param>
+                                <param name="default"><meta><title lang="en">default</title></meta></param>
+                            </param>
+                        </params>
                     </property>
                 </properties>
             </type>

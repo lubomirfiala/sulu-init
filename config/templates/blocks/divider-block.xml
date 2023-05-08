@@ -9,7 +9,7 @@
 
             <type name="divider-block">
                 <meta>
-                    <title lang="en">divider</title>
+                    <title lang="en">Divider block</title>
                 </meta>
                 <properties>
                     <property name="size" type="number">

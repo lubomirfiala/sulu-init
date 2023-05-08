@@ -9,7 +9,7 @@
 
             <type name="text-block">
                 <meta>
-                    <title lang="en">text</title>
+                    <title lang="en">Text block</title>
                 </meta>
                 <properties>
                     <property name="text" type="text_editor">

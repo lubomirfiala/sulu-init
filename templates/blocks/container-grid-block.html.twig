@@ -14,7 +14,8 @@
           {% elseif block.type == 'divider-block' %}
             {% include 'blocks/divider-block.html.twig' with { data: block } %}
           {% else %}
-            <div class="warning-block">Unknown block</div>
+            <div class="error-box">Unknown block</div>
+            {{ dump(block) }}
           {% endif %}
         {% endfor %}
       </div>

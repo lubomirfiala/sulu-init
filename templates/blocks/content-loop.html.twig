@@ -20,6 +20,11 @@
       {% include 'blocks/container-grid-block.html.twig' with { data: block } %}
     </div>
 
+  {% elseif block.type == 'container-card-block' %}
+    <div class="container">
+      {% include 'blocks/container-card-block.html.twig' with { data: block } %}
+    </div>
+
   {% elseif block.type == 'button-block' %}
     {% include 'blocks/button-block.html.twig' with { data: block } %}
 
@@ -29,8 +34,9 @@
   {% elseif block.type == 'divider-block' %}
     {% include 'blocks/divider-block.html.twig' with { data: block } %}
 
+
   {% else %}
-    <div class="warning-block">
+    <div class="error-box">
       Unknown block <br>
       {{ dump(block) }}
     </div>
