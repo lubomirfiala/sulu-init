@@ -1,0 +1,32 @@
+<?xml version="1.0" ?>
+<properties xmlns="http://schemas.sulu.io/template/template"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xmlns:xi="http://www.w3.org/2001/XInclude"
+            xsi:schemaLocation="http://schemas.sulu.io/template/template http://schemas.sulu.io/template/template-1.0.xsd">
+    <block name="content">
+        <types>
+
+
+
+            <type name="image-block">
+                <meta>
+                    <title lang="en">Image</title>
+                </meta>
+                <properties>
+                    <property name="image" type="single_media_selection">
+                        <meta>
+                            <title lang="en">Image</title>
+                        </meta>
+                        <params>
+                            <param name="types" value="image"/>
+                        </params>
+                    </property>
+
+                </properties>
+            </type>
+
+
+
+        </types>
+    </block>
+</properties>

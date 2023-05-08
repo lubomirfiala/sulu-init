@@ -1,0 +1,69 @@
+<?xml version="1.0" ?>
+<properties xmlns="http://schemas.sulu.io/template/template"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:schemaLocation="http://schemas.sulu.io/template/template http://schemas.sulu.io/template/template-1.0.xsd">
+    <block name="content">
+        <types>
+
+
+
+            <type name="button-block">
+                <meta>
+                    <title lang="en">button</title>
+                </meta>
+                <properties>
+                    <property name="text" type="text_line" colspan="4">
+                        <meta><title lang="en">Text</title></meta>
+                    </property>
+                    <property name="link" type="link" colspan="4">
+                        <meta><title lang="en">Link</title></meta>
+                    </property>
+                    <property name="linkOverride" type="text_line" colspan="4">
+                        <meta><title lang="en">Link override</title></meta>
+                    </property>
+                    <property name="size" type="single_select" colspan="2">
+                        <meta><title lang="en">Size</title></meta>
+                        <params>
+                            <param name="default_value" value=""/>
+                            <param name="values" type="collection">
+                                <param name=""><meta><title lang="en">default</title></meta></param>
+                                <param name="small"><meta><title lang="en">small</title></meta></param>
+                                <param name="large"><meta><title lang="en">large</title></meta></param>
+                            </param>
+                        </params>
+                    </property>
+                    <property name="color" type="single_select" colspan="2">
+                        <meta><title lang="en">Color</title></meta>
+                        <params>
+                            <param name="default_value" value=""/>
+                            <param name="values" type="collection">
+                                <param name=""><meta><title lang="en">default</title></meta></param>
+                                <param name="primary"><meta><title lang="en">primary</title></meta></param>
+                            </param>
+                        </params>
+                    </property>
+                    <property name="outline" type="checkbox" colspan="2">
+                        <meta><title lang="en">outline</title></meta>
+                    </property>
+                    <property name="style" type="single_select" colspan="2">
+                        <meta><title lang="en">Style</title></meta>
+                        <params>
+                            <param name="default_value" value=""/>
+                            <param name="values" type="collection">
+                                <param name=""><meta><title lang="en">default</title></meta></param>
+                                <param name="rounded"><meta><title lang="en">rounded</title></meta></param>
+                                <param name="circle"><meta><title lang="en">circle</title></meta></param>
+                            </param>
+                        </params>
+                    </property>
+                    <property name="classes" type="text_line" colspan="4">
+                        <meta><title lang="en">classes</title></meta>
+                    </property>
+                </properties>
+            </type>
+
+
+
+        </types>
+    </block>
+</properties>

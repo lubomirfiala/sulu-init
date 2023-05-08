@@ -7,9 +7,8 @@
 @import 'base/errors';
 
 
-@import 'helpers/d-flex';
-@import 'helpers/row';
-
+@import 'components/d-flex';
+@import 'components/row';
 @import 'components/btn';
 @import 'components/article-card';
 @import 'components/card';
@@ -20,9 +19,9 @@
 @import 'layout/header';
 @import 'layout/footer';
 //
-//@import 'blocks/image-block';
+@import 'blocks/image-block';
+@import 'blocks/flex-block';
 //@import 'blocks/grid-block';
-//@import 'blocks/flex-block';
 //@import 'blocks/category-preview-block';
 //@import 'blocks/warning-block';
 //@import 'blocks/article-list-block';

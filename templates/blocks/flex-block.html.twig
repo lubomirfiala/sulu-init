@@ -1,0 +1,15 @@
+<div class="flex-block {{ data.maxWidth }}" style="justify-content: {{ data.justify }}; align-items: {{ data.align }};">
+  {% for block in data.content %}
+    {% if block.type == 'text-block' %}
+      <div>
+        {% include 'blocks/text-block.html.twig' with { data: block } %}
+      </div>
+    {% elseif block.type == 'image-block' %}
+          {% include 'blocks/image-block.html.twig' with { data: block } %}
+    {% elseif block.type == 'button-block' %}
+          {% include 'blocks/button-block.html.twig' with { data: block } %}
+    {% else %}
+          <div class="warning-block">Unknown block</div>
+    {% endif %}
+  {% endfor %}
+</div>

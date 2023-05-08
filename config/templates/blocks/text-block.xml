@@ -1,0 +1,27 @@
+<?xml version="1.0" ?>
+<properties xmlns="http://schemas.sulu.io/template/template"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:schemaLocation="http://schemas.sulu.io/template/template http://schemas.sulu.io/template/template-1.0.xsd">
+    <block name="content">
+        <types>
+
+
+
+            <type name="text-block">
+                <meta>
+                    <title lang="en">text</title>
+                </meta>
+                <properties>
+                    <property name="text" type="text_editor">
+                        <meta><title lang="en">text</title></meta>
+                        <tag name="sulu.block_preview" priority="1024"/>
+                        <tag name="sulu.search.field" />
+                    </property>
+                </properties>
+            </type>
+
+
+
+        </types>
+    </block>
+</properties>

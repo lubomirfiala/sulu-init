@@ -1,0 +1,24 @@
+.image-block {
+  width: 100%;
+  margin: auto;
+  padding-bottom: $padding;
+  img {
+    border-radius: $boxBorderRadius;
+  }
+}
+
+.flex-block {
+  .image-block {
+    margin: 0;
+    padding-bottom: 0;
+    img {
+      border-radius: 0;
+    }
+  }
+  .image-block:first-child {
+    margin-top: 0;
+  }
+  .image-block:last-child {
+    margin-bottom: 0;
+  }
+}

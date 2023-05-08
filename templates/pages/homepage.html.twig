@@ -41,7 +41,7 @@
             <div class="btn primary rounded">asdf</div>
             <div class="btn primary circle">+</div>
         </div>
-        <div class="row mt-2">
+        <div class="row mt-2 mb-5">
             <div class="card col-12 col-tablet-6 ">
                 <h3>card col-12 col-tablet-6</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum interdum condimentum ex, et euismod enim laoreet a. Etiam rhoncus aliquam ante, at condimentum ante ultricies at. Nunc quam tellus, faucibus vitae tempus id, convallis id ante. Quisque id faucibus risus. </p>
@@ -53,5 +53,6 @@
         </div>
     </div>
 
-    {{ content.article|raw }}
+    {% include 'blocks/content-loop.html.twig' with { blocks: content.content } %}
+
 {% endblock %}

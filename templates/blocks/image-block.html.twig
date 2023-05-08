@@ -1,0 +1,19 @@
+{% if data.image %}
+  <div
+      class="image-block"
+  >
+    {% if 'svg' in data.image.fileVersion.mimeType %}
+      <img
+          src="{{ data.image.thumbnails['full'] }}"
+          alt="{{ data.image.title }}"
+          title="{{ data.image.description|default(data.image.title) }}"
+      />
+    {% else %}
+      <img
+          src="{{ data.image.thumbnails['full.webp'] }}"
+          alt="{{ data.image.title }}"
+          title="{{ data.image.description|default(data.image.title) }}"
+      />
+    {% endif %}
+  </div>
+{% endif %}

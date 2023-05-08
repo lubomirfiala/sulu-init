@@ -1,0 +1,81 @@
+<?xml version="1.0" ?>
+<properties xmlns="http://schemas.sulu.io/template/template"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xmlns:xi="http://www.w3.org/2001/XInclude"
+            xsi:schemaLocation="http://schemas.sulu.io/template/template http://schemas.sulu.io/template/template-1.0.xsd">
+    <block name="content">
+        <types>
+
+
+
+            <type name="flex-block">
+                <meta>
+                    <title lang="en">Flex</title>
+                </meta>
+                <properties>
+                    <property name="justify" type="single_select" colspan="4">
+                        <meta><title lang="en">justify - horizontal</title></meta>
+                        <params>
+                            <param name="default_value" value="center"/>
+                            <param name="values" type="collection">
+                                <param name="center"><meta><title lang="en">center</title></meta></param>
+                                <param name="start"><meta><title lang="en">start</title></meta></param>
+                                <param name="end"><meta><title lang="en">end</title></meta></param>
+                                <param name="space-between"><meta><title lang="en">space-between</title></meta></param>
+                                <param name="space-around"><meta><title lang="en">space-around</title></meta></param>
+                            </param>
+                        </params>
+                    </property>
+                    <property name="align" type="single_select" colspan="4">
+                        <meta><title lang="en">align - vertical</title></meta>
+                        <params>
+                            <param name="default_value" value="center"/>
+                            <param name="values" type="collection">
+                                <param name="center"><meta><title lang="en">center</title></meta></param>
+                                <param name="baseline"><meta><title lang="en">baseline</title></meta></param>
+                                <param name="start"><meta><title lang="en">start</title></meta></param>
+                                <param name="end"><meta><title lang="en">end</title></meta></param>
+                            </param>
+                        </params>
+                    </property>
+                    <property name="maxWidth" type="single_select" colspan="4">
+                        <meta><title lang="en">max-width</title></meta>
+                        <params>
+                            <param name="default_value" value="width-default"/>
+                            <param name="values" type="collection">
+                                <param name="width-default"><meta><title lang="en">default</title></meta></param>
+                                <param name="width-container"><meta><title lang="en">container</title></meta></param>
+                            </param>
+                        </params>
+                    </property>
+
+                    <block name="content">
+                        <meta>
+                            <title lang="en">Content</title>
+                        </meta>
+                        <params>
+                            <param name="add_button_text">
+                                <meta>
+                                    <title lang="en">Add content</title>
+                                </meta>
+                            </param>
+                        </params>
+                        <types>
+
+                            <xi:include href="../blocks/text-block.xml" xpointer="xmlns(sulu=http://schemas.sulu.io/template/template)xpointer(/sulu:properties/sulu:block/sulu:types/sulu:type)"/>
+
+                            <xi:include href="../blocks/image-block.xml" xpointer="xmlns(sulu=http://schemas.sulu.io/template/template)xpointer(/sulu:properties/sulu:block/sulu:types/sulu:type)"/>
+
+                            <xi:include href="../blocks/button-block.xml" xpointer="xmlns(sulu=http://schemas.sulu.io/template/template)xpointer(/sulu:properties/sulu:block/sulu:types/sulu:type)"/>
+
+                        </types>
+                    </block>
+
+                </properties>
+            </type>
+
+
+
+        </types>
+    </block>
+</properties>

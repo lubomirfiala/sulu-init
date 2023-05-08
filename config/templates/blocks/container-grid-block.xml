@@ -1,0 +1,205 @@
+<?xml version="1.0" ?>
+<properties xmlns="http://schemas.sulu.io/template/template"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xmlns:xi="http://www.w3.org/2001/XInclude"
+            xsi:schemaLocation="http://schemas.sulu.io/template/template http://schemas.sulu.io/template/template-1.0.xsd">
+    <block name="content">
+        <types>
+
+
+
+            <type name="container-grid-block">
+                <meta>
+                    <title lang="en">Grid</title>
+                </meta>
+                <properties>
+
+                    <property name="align" type="single_select" colspan="4">
+                        <meta><title lang="en">align - vertical</title></meta>
+                        <params>
+                            <param name="default_value" value="center"/>
+                            <param name="values" type="collection">
+                                <param name="center"><meta><title lang="en">center</title></meta></param>
+                                <param name="strech"><meta><title lang="en">strech</title></meta></param>
+                                <param name="start"><meta><title lang="en">start</title></meta></param>
+                                <param name="end"><meta><title lang="en">end</title></meta></param>
+                            </param>
+                        </params>
+                    </property>
+                    <block name="cols">
+                        <meta>
+                            <title lang="en">cols</title>
+                        </meta>
+                        <params>
+                            <param name="add_button_text">
+                                <meta>
+                                    <title lang="en">Add col</title>
+                                </meta>
+                            </param>
+                        </params>
+                        <types>
+                            <type name="col">
+                                <meta>
+                                    <title lang="en">text</title>
+                                </meta>
+                                <properties>
+                                    <property name="col" type="single_select" colspan="2">
+                                        <meta><title lang="en">col</title></meta>
+                                        <tag name="sulu.block_preview" priority="128"/>
+                                        <params>
+                                            <param name="default_value" value="col-12"/>
+                                            <param name="values" type="collection">
+                                                <param name="col-1"><meta><title lang="en">col-1</title></meta></param>
+                                                <param name="col-2"><meta><title lang="en">col-2</title></meta></param>
+                                                <param name="col-3"><meta><title lang="en">col-3</title></meta></param>
+                                                <param name="col-4"><meta><title lang="en">col-4</title></meta></param>
+                                                <param name="col-5"><meta><title lang="en">col-5</title></meta></param>
+                                                <param name="col-6"><meta><title lang="en">col-6</title></meta></param>
+                                                <param name="col-7"><meta><title lang="en">col-7</title></meta></param>
+                                                <param name="col-8"><meta><title lang="en">col-8</title></meta></param>
+                                                <param name="col-9"><meta><title lang="en">col-9</title></meta></param>
+                                                <param name="col-10"><meta><title lang="en">col-10</title></meta></param>
+                                                <param name="col-11"><meta><title lang="en">col-11</title></meta></param>
+                                                <param name="col-12"><meta><title lang="en">col-12</title></meta></param>
+                                            </param>
+                                        </params>
+                                    </property>
+                                    <property name="colTablet" type="single_select" colspan="2">
+                                        <meta><title lang="en">col-tablet</title></meta>
+                                        <tag name="sulu.block_preview" priority="256"/>
+                                        <params>
+                                            <param name="default_value" value=""/>
+                                            <param name="values" type="collection">
+                                                <param name=""><meta><title lang="en">---</title></meta></param>
+                                                <param name="col-tablet-1"><meta><title lang="en">col-tablet-1</title></meta></param>
+                                                <param name="col-tablet-2"><meta><title lang="en">col-tablet-2</title></meta></param>
+                                                <param name="col-tablet-3"><meta><title lang="en">col-tablet-3</title></meta></param>
+                                                <param name="col-tablet-4"><meta><title lang="en">col-tablet-4</title></meta></param>
+                                                <param name="col-tablet-5"><meta><title lang="en">col-tablet-5</title></meta></param>
+                                                <param name="col-tablet-6"><meta><title lang="en">col-tablet-6</title></meta></param>
+                                                <param name="col-tablet-7"><meta><title lang="en">col-tablet-7</title></meta></param>
+                                                <param name="col-tablet-8"><meta><title lang="en">col-tablet-8</title></meta></param>
+                                                <param name="col-tablet-9"><meta><title lang="en">col-tablet-9</title></meta></param>
+                                                <param name="col-tablet-10"><meta><title lang="en">col-tablet-10</title></meta></param>
+                                                <param name="col-tablet-11"><meta><title lang="en">col-tablet-11</title></meta></param>
+                                                <param name="col-tablet-12"><meta><title lang="en">col-tablet-12</title></meta></param>
+                                            </param>
+                                        </params>
+                                    </property>
+                                    <property name="colDesktop" type="single_select" colspan="2">
+                                        <meta><title lang="en">col-desktop</title></meta>
+                                        <tag name="sulu.block_preview" priority="384"/>
+                                        <params>
+                                            <param name="default_value" value=""/>
+                                            <param name="values" type="collection">
+                                                <param name=""><meta><title lang="en">---</title></meta></param>
+                                                <param name="col-desktop-1"><meta><title lang="en">col-desktop-1</title></meta></param>
+                                                <param name="col-desktop-2"><meta><title lang="en">col-desktop-2</title></meta></param>
+                                                <param name="col-desktop-3"><meta><title lang="en">col-desktop-3</title></meta></param>
+                                                <param name="col-desktop-4"><meta><title lang="en">col-desktop-4</title></meta></param>
+                                                <param name="col-desktop-5"><meta><title lang="en">col-desktop-5</title></meta></param>
+                                                <param name="col-desktop-6"><meta><title lang="en">col-desktop-6</title></meta></param>
+                                                <param name="col-desktop-7"><meta><title lang="en">col-desktop-7</title></meta></param>
+                                                <param name="col-desktop-8"><meta><title lang="en">col-desktop-8</title></meta></param>
+                                                <param name="col-desktop-9"><meta><title lang="en">col-desktop-9</title></meta></param>
+                                                <param name="col-desktop-10"><meta><title lang="en">col-desktop-10</title></meta></param>
+                                                <param name="col-desktop-11"><meta><title lang="en">col-desktop-11</title></meta></param>
+                                                <param name="col-desktop-12"><meta><title lang="en">col-desktop-12</title></meta></param>
+                                            </param>
+                                        </params>
+                                    </property>
+                                    <property name="orderTablet" type="single_select" colspan="2">
+                                        <meta><title lang="en">order-tablet</title></meta>
+                                        <params>
+                                            <param name="default_value" value=""/>
+                                            <param name="values" type="collection">
+                                                <param name=""><meta><title lang="en">---</title></meta></param>
+                                                <param name="order-tablet-1"><meta><title lang="en">order-tablet-1</title></meta></param>
+                                                <param name="order-tablet-2"><meta><title lang="en">order-tablet-2</title></meta></param>
+                                                <param name="order-tablet-3"><meta><title lang="en">order-tablet-3</title></meta></param>
+                                                <param name="order-tablet-4"><meta><title lang="en">order-tablet-4</title></meta></param>
+                                                <param name="order-tablet-5"><meta><title lang="en">order-tablet-5</title></meta></param>
+                                                <param name="order-tablet-6"><meta><title lang="en">order-tablet-6</title></meta></param>
+                                                <param name="order-tablet-7"><meta><title lang="en">order-tablet-7</title></meta></param>
+                                                <param name="order-tablet-8"><meta><title lang="en">order-tablet-8</title></meta></param>
+                                                <param name="order-tablet-9"><meta><title lang="en">order-tablet-9</title></meta></param>
+                                                <param name="order-tablet-10"><meta><title lang="en">order-tablet-10</title></meta></param>
+                                                <param name="order-tablet-11"><meta><title lang="en">order-tablet-11</title></meta></param>
+                                                <param name="order-tablet-12"><meta><title lang="en">order-tablet-12</title></meta></param>
+                                            </param>
+                                        </params>
+                                    </property>
+                                    <property name="orderDesktop" type="single_select" colspan="2">
+                                        <meta><title lang="en">order-desktop</title></meta>
+                                        <params>
+                                            <param name="default_value" value=""/>
+                                            <param name="values" type="collection">
+                                                <param name=""><meta><title lang="en">---</title></meta></param>
+                                                <param name="order-desktop-1"><meta><title lang="en">order-desktop-1</title></meta></param>
+                                                <param name="order-desktop-2"><meta><title lang="en">order-desktop-2</title></meta></param>
+                                                <param name="order-desktop-3"><meta><title lang="en">order-desktop-3</title></meta></param>
+                                                <param name="order-desktop-4"><meta><title lang="en">order-desktop-4</title></meta></param>
+                                                <param name="order-desktop-5"><meta><title lang="en">order-desktop-5</title></meta></param>
+                                                <param name="order-desktop-6"><meta><title lang="en">order-desktop-6</title></meta></param>
+                                                <param name="order-desktop-7"><meta><title lang="en">order-desktop-7</title></meta></param>
+                                                <param name="order-desktop-8"><meta><title lang="en">order-desktop-8</title></meta></param>
+                                                <param name="order-desktop-9"><meta><title lang="en">order-desktop-9</title></meta></param>
+                                                <param name="order-desktop-10"><meta><title lang="en">order-desktop-10</title></meta></param>
+                                                <param name="order-desktop-11"><meta><title lang="en">order-desktop-11</title></meta></param>
+                                                <param name="order-desktop-12"><meta><title lang="en">order-desktop-12</title></meta></param>
+                                            </param>
+                                        </params>
+                                    </property>
+                                    <property name="style" type="single_select" colspan="2">
+                                        <meta><title lang="en">style</title></meta>
+                                        <params>
+                                            <param name="default_value" value=""/>
+                                            <param name="values" type="collection">
+                                                <param name=""><meta><title lang="en">---</title></meta></param>
+                                                <param name="card"><meta><title lang="en">card</title></meta></param>
+                                            </param>
+                                        </params>
+                                    </property>
+                                    <property name="classes" type="text_line" colspan="6">
+                                        <meta><title lang="en">classes</title></meta>
+                                    </property>
+
+                                    <block name="content">
+                                        <meta>
+                                            <title lang="en">Content left</title>
+                                        </meta>
+                                        <params>
+                                            <param name="add_button_text">
+                                                <meta>
+                                                    <title lang="en">Add content</title>
+                                                </meta>
+                                            </param>
+                                        </params>
+                                        <types>
+
+                                            <xi:include href="../blocks/text-block.xml" xpointer="xmlns(sulu=http://schemas.sulu.io/template/template)xpointer(/sulu:properties/sulu:block/sulu:types/sulu:type)"/>
+
+                                            <xi:include href="../blocks/image-block.xml" xpointer="xmlns(sulu=http://schemas.sulu.io/template/template)xpointer(/sulu:properties/sulu:block/sulu:types/sulu:type)"/>
+
+                                            <xi:include href="../blocks/flex-block.xml" xpointer="xmlns(sulu=http://schemas.sulu.io/template/template)xpointer(/sulu:properties/sulu:block/sulu:types/sulu:type)"/>
+
+                                            <xi:include href="../blocks/button-block.xml" xpointer="xmlns(sulu=http://schemas.sulu.io/template/template)xpointer(/sulu:properties/sulu:block/sulu:types/sulu:type)"/>
+
+                                            <xi:include href="../blocks/divider-block.xml" xpointer="xmlns(sulu=http://schemas.sulu.io/template/template)xpointer(/sulu:properties/sulu:block/sulu:types/sulu:type)"/>
+
+                                        </types>
+                                    </block>
+                                </properties>
+                            </type>
+                        </types>
+                    </block>
+
+
+                </properties>
+            </type>
+
+
+
+        </types>
+    </block>
+</properties>
