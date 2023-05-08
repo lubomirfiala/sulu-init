@@ -22,6 +22,8 @@ Preconfigured [Sulu](https://sulu.io) installation for a quicker start of new pr
   - button block
   - divider block 
 - simple page-list service that can be used for limited blog/article functionality
+- vue components
+  - simple fullscreen gallery
 
 ---
 
