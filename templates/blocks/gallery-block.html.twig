@@ -1,0 +1,19 @@
+  <div
+      class="gallery-block"
+  >
+    {% for image in data.images %}
+      {% if 'svg' in image.fileVersion.mimeType %}
+        <img
+            src="{{ image.thumbnails['full'] }}"
+            alt="{{ image.title }}"
+            title="{{ image.description|default(image.title) }}"
+        />
+      {% else %}
+        <img
+            src="{{ image.thumbnails['full.webp'] }}"
+            alt="{{ image.title }}"
+            title="{{ image.description|default(image.title) }}"
+        />
+      {% endif %}
+    {% endfor %}
+  </div>

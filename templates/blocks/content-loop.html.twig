@@ -6,6 +6,9 @@
     {% elseif block.type == 'image-block' %}
         {% include 'blocks/image-block.html.twig' with { data: block } %}
 
+    {% elseif block.type == 'gallery-block' %}
+      {% include 'blocks/gallery-block.html.twig' with { data: block } %}
+
     {% elseif block.type == 'flex-block' %}
         {% include 'blocks/flex-block.html.twig' with { data: block } %}
 

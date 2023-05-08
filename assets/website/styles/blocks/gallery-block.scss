@@ -1,0 +1,15 @@
+.gallery-block {
+  width: 100%;
+  margin: auto;
+  padding-bottom: $padding;
+  img {
+    border-radius: $boxBorderRadius;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(20rem,1fr));
+  gap: $gap;
+}
+
