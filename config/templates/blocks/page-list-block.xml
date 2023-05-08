@@ -8,9 +8,9 @@
 
 
 
-            <type name="article-list-block">
+            <type name="page-list-block">
                 <meta>
-                    <title lang="en">Article list block</title>
+                    <title lang="en">Page list block</title>
                 </meta>
                 <properties>
                     <property name="parent" type="single_page_selection" colspan="8">

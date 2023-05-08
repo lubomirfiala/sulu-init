@@ -1,0 +1,56 @@
+<div class="article-list-block">
+  <div class="article-grid">
+    {% if data.articles is defined %}
+      {% for article in data.articles %}
+        <a href="{{ article.content.url }}" class="article-card">
+          {% if article.content.image %}
+            <div class="picture">
+              <img
+                  src="{{ article.content.image.thumbnails['full.webp'] }}"
+                  alt="{{ article.content.image.title }}"
+                  title="{{ article.content.image.description|default(article.content.image.title) }}"
+              />
+            </div>
+          {% endif %}
+          <div class="text">
+            <div class="name">{{ article.content.title }}</div>
+            <div class="perex">{{ article.content.perex | trimPerex }}</div>
+          </div>
+        </a>
+      {% endfor %}
+    {% else %}
+      <div class="warning-block">Article block: articles are not computed</div>
+    {% endif %}
+  </div>
+  <div class="pagination">
+    {% if data.pagination is defined %}
+      <div>
+        <a
+            href="?x={{ data.pagination.prevPage }}"
+            class="btn circle primary {{ (data.pagination.currentPage == data.pagination.prevPage) ? 'disabled' : '' }}"
+        ><</a>
+        {% for page in range(0, data.pagination.lastPage) %}
+          {% if (
+            page == 0 or
+            page == data.pagination.lastPage or
+            ( page > data.pagination.currentPage -2 and page < data.pagination.currentPage +2 )
+            ) %}
+            {% if page == data.pagination.lastPage and data.pagination.currentPage < (data.pagination.lastPage - 2) %} ... {% endif %}
+            <a
+                href="?x={{ page }}"
+                class="btn {{ (page == data.pagination.currentPage)? 'primary' : 'secondary' }}"
+            >
+              {{ page + 1 }}
+            </a>
+            {% if page == 0 and data.pagination.currentPage > 2 %} ... {% endif %}
+          {% endif %}
+
+        {% endfor %}
+        <a
+            href="?x={{ data.pagination.nextPage }}"
+            class="btn circle primary {{ (data.pagination.currentPage == data.pagination.nextPage) ? 'disabled' : '' }}"
+        >></a>
+      </div>
+    {% endif %}
+  </div>
+</div>

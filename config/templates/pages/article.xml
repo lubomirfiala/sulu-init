@@ -4,14 +4,14 @@
           xmlns:xi="http://www.w3.org/2001/XInclude"
           xsi:schemaLocation="http://schemas.sulu.io/template/template http://schemas.sulu.io/template/template-1.0.xsd">
 
-    <key>homepage</key>
+    <key>article</key>
 
-    <view>pages/homepage</view>
+    <view>pages/article</view>
     <controller>Sulu\Bundle\WebsiteBundle\Controller\DefaultController::indexAction</controller>
-    <cacheLifetime>86400</cacheLifetime>
+    <cacheLifetime>604800</cacheLifetime>
 
     <meta>
-        <title lang="en">Homepage</title>
+        <title lang="en">Article</title>
     </meta>
 
     <properties>
@@ -32,6 +32,31 @@
             </meta>
 
             <tag name="sulu.rlp"/>
+        </property>
+
+        <property name="perex" type="text_area" mandatory="true" colspan="6">
+            <meta>
+                <title lang="en">Article perex</title>
+            </meta>
+        </property>
+
+        <property name="image" type="single_media_selection" mandatory="true" colspan="6">
+            <meta>
+                <title lang="en">Article image</title>
+            </meta>
+        </property>
+
+        <property name="card-size" type="single_select" colspan="4">
+            <meta><title lang="en">card size</title></meta>
+            <tag name="sulu.block_preview" priority="128"/>
+            <params>
+                <param name="default_value" value="1x1"/>
+                <param name="values" type="collection">
+                    <param name="1x1"><meta><title lang="en">1x1</title></meta></param>
+                    <param name="2x1"><meta><title lang="en">2x1</title></meta></param>
+                    <param name="2x2"><meta><title lang="en">2x2</title></meta></param>
+                </param>
+            </params>
         </property>
 
         <block name="content">
