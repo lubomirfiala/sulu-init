@@ -1,0 +1,45 @@
+.article-card {
+  flex-grow: 1;
+  background: #ffffff;
+  color: #333333;
+  text-decoration: none;
+  border-radius: $boxBorderRadius;
+  box-shadow: 0 0 1rem #00000022;
+  display: grid;
+  gap: 1rem;
+  grid-template-rows: 1fr auto;
+  transition: all .2s;
+  &:hover {
+    cursor: pointer;
+    top: -1px;
+    box-shadow: 0 .4rem 1rem #00000022;
+    text-decoration: none;
+    color: #333333;
+  }
+  .picture {
+    position: relative;
+    img {
+      position: absolute;
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+      border-top-left-radius: $boxBorderRadius;
+      border-top-right-radius: $boxBorderRadius;
+    }
+  }
+  .text {
+    padding: 0 1rem 1.5rem;
+    text-align: center;
+    .name {
+      font-size: 1.2rem;
+      padding-bottom: .5rem;
+    }
+    .perex {
+      font-size: .8rem;
+    }
+    * {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}

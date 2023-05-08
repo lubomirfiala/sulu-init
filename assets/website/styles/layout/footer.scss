@@ -1,0 +1,115 @@
+footer {
+  margin: auto;
+  max-width: $pageMaxWidth;
+  padding: 5rem $padding 10rem;
+  .background {
+    background: $accent;
+    padding: 1.5rem;
+    border-radius: $boxBorderRadius;
+    color: #ffffff;
+    a {
+      color: #ffffff;
+      text-decoration-color: #ffffff55;
+    }
+    .container {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+      .logo {
+        height: 3rem;
+        width: 15rem;
+        justify-self: start;
+        border-radius: 1rem;
+        background: $accentTextColor;
+        color: $accent;
+        line-height: 3rem;
+        text-align: center;
+      }
+      .menu-1 {
+      }
+      .menu-2 {
+
+      }
+      .contact {
+
+      }
+      .newsletter {
+        border: 1px solid #ffffff88;
+        padding: .7rem 1rem;
+        border-radius: $boxBorderRadius;
+      }
+      .legal {
+        font-size: .8rem;
+
+      }
+      .actions {
+
+      }
+      .link {
+        display: block;
+        padding: .6rem 0;
+      }
+    }
+  }
+  @media (min-width: $tablet) {
+    .background {
+      padding: 3rem;
+      .container {
+        grid-template-columns: 15rem 1fr 1fr;
+        gap: 2rem;
+        .menu-1 {
+          grid-column: 2/3;
+        }
+        .menu-2 {
+          grid-column: 3/4;
+        }
+        .contact {
+          grid-column: 2/4;
+        }
+        .newsletter {
+          grid-column: 2/4;
+        }
+        .legal {
+          grid-column: 2/4;
+        }
+        .actions {
+          grid-column: 2/4;
+        }
+      }
+    }
+
+  }
+  @media (min-width: $desktop) {
+    .background {
+      padding: 3rem;
+      .container {
+        grid-template-columns: 15rem 2fr 3fr 3fr;
+        gap: 3rem;
+        .menu-1 {
+          grid-column: 2/3;
+          grid-row: 1/3;
+        }
+        .menu-2 {
+          grid-column: 3/4;
+          grid-row: 1/3;
+        }
+        .contact {
+          grid-column: 4/5;
+        }
+        .newsletter {
+          grid-column: 4/5;
+          align-self: center;
+        }
+        .legal {
+          grid-column: 2/4;
+        }
+        .actions {
+          grid-column: 4/5;
+          justify-self: end;
+        }
+      }
+    }
+
+  }
+
+}

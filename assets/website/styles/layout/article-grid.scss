@@ -1,0 +1,11 @@
+.article-grid {
+  width: 100%;
+  max-width: $containerMaxWidth;
+  padding: 0 $padding;
+  margin: auto;
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fill,minmax(20rem,1fr));
+  grid-auto-rows: 28rem;
+  grid-auto-flow: dense;
+}

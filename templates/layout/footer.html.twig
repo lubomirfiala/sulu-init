@@ -1,0 +1,46 @@
+<footer>
+  <div class="background">
+    <div class="container">
+      <a href="/" class="logo">
+        LOGO
+      </a>
+      <div class="menu-1">
+        <a href="#" class="link">remove</a>
+        <a href="#" class="link">this</a>
+        <a href="#" class="link">link</a>
+        {% set navigationFooter1 = sulu_navigation_root_flat('footer1') %}
+        {% for link in navigationFooter1 %}
+          <a href="{{ link.url }}" class="link">{{ link.title }}</a>
+        {% endfor %}
+      </div>
+      <div class="menu-2">
+        <a href="#" class="link">remove</a>
+        <a href="#" class="link">this</a>
+        <a href="#" class="link">link</a>
+        {% set navigationFooter2 = sulu_navigation_root_flat('footer2') %}
+        {% for link in navigationFooter2 %}
+          <a href="{{ link.url }}" class="link">{{ link.title }}</a>
+        {% endfor %}
+      </div>
+      <div class="contact">
+        <a href="#" class="link">email@email.email</a>
+        <a href="#" class="link">+420 123 456 789</a>
+      </div>
+      <div class="newsletter">Přihlásit se k newsletteru</div>
+      <div class="legal">
+        <a href="#" class="link">remove</a>
+        <a href="#" class="link">this</a>
+        <a href="#" class="link">link</a>
+        {% set navigationFooterLegal = sulu_navigation_root_flat('footerLegal') %}
+        {% for link in navigationFooterLegal %}
+          <a href="{{ link.url }}" class="link">{{ link.title }}</a>
+        {% endfor %}
+      </div>
+      <div class="actions">
+        <span class="material-symbols-outlined">person</span>
+        <span class="material-symbols-outlined">shopping_cart</span>
+        <span class="material-symbols-outlined">search</span>
+      </div>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,63 @@
+
+.mt {  margin-top: $tabletPadding; }
+.mr {  margin-right: $padding; }
+.mb {  margin-bottom: $tabletPadding; }
+.ml {  margin-left: $padding; }
+
+.pt {  padding-top: $tabletPadding; }
+.pr {  padding-right: $padding; }
+.pb {  padding-bottom: $tabletPadding; }
+.pl {  padding-left: $padding; }
+
+.mt-0 { margin-top: 0; }
+.mr-0 { margin-right: 0;}
+.mb-0 { margin-bottom: 0; }
+.ml-0 { margin-left: 0; }
+
+.pt-0 { padding-top: 0; }
+.pr-0 { padding-right: 0;}
+.pb-0 { padding-bottom: 0; }
+.pl-0 { padding-left: 0; }
+
+.mt-1 {  margin-top: 1rem;  }
+.mr-1 {  margin-right: 1rem;  }
+.mb-1 {  margin-bottom: 1rem;  }
+.ml-1 {  margin-left: 1rem;  }
+
+.mt-2 {  margin-top: 2rem;  }
+.mr-2 {  margin-right: 2rem;  }
+.mb-2 {  margin-bottom: 2rem;  }
+.ml-2 {  margin-left: 2rem;  }
+
+.mt-3 {  margin-top: 3rem;  }
+.mr-3 {  margin-right: 3rem;  }
+.mb-3 {  margin-bottom: 3rem;  }
+.ml-3 {  margin-left: 3rem;  }
+
+.mt-5 {  margin-top: 5rem;  }
+.mr-5 {  margin-right: 5rem;  }
+.mb-5 {  margin-bottom: 5rem;  }
+.ml-5 {  margin-left: 5rem;  }
+
+.mt-10 {  margin-top: 10rem;  }
+.mr-10 {  margin-right: 10rem;  }
+.mb-10 {  margin-bottom: 10rem;  }
+.ml-10 {  margin-left: 10rem;  }
+
+@media (min-width: $tablet) {
+  .mr { margin-right: $tabletPadding; }
+  .ml { margin-left: $tabletPadding; }
+  .pr { padding-right: $tabletPadding; }
+  .pl { padding-left: $tabletPadding; }
+}
+
+@media (min-width: $desktop) {
+  .mt { margin-top: $desktopPadding; }
+  .mr { margin-right: $desktopPadding; }
+  .mb { margin-bottom: $desktopPadding; }
+  .ml { margin-left: $tabletPadding; }
+  .pt { padding-top: $desktopPadding; }
+  .pr { padding-right: $desktopPadding; }
+  .pb { padding-bottom: $desktopPadding; }
+  .pl { padding-left: $tabletPadding; }
+}

@@ -1,0 +1,30 @@
+<header>
+  <div class="header-wrapper">
+    <div class="header">
+      <div class="container">
+        <a href="/" class="logo">
+          LOGO
+        </a>
+        <nav>
+          <a href="#" class="link">remove</a>
+          <a href="#" class="link">this</a>
+          <a href="#" class="link">link</a>
+          {% set navigationHeader = sulu_navigation_root_flat('header') %}
+          {% for link in navigationHeader %}
+            <a href="{{ link.url }}" class="menu-link">{{ link.title }}</a>
+          {% endfor %}
+        </nav>
+        <div class="actions">
+          <a href="#" class="link"><span class="material-symbols-outlined">person</span></a>
+          <a href="#" class="link"><span class="material-symbols-outlined">shopping_cart</span></a>
+          <a href="#" class="link"><span class="material-symbols-outlined">search</span></a>
+        </div>
+        <div class="mobile-menu-toggle">
+          <div class="link">
+            menu
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

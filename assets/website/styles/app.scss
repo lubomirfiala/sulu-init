@@ -1,3 +1,31 @@
-body {
-    background-color: lightgray;
-}
+@import 'variables/colors';
+@import 'variables/sizes';
+
+@import 'base/resets';
+@import 'base/typography';
+@import 'base/margins';
+@import 'base/errors';
+
+
+@import 'helpers/d-flex';
+@import 'helpers/row';
+
+@import 'components/btn';
+@import 'components/article-card';
+
+@import 'layout/container';
+@import 'layout/article-grid';
+
+@import 'layout/header';
+@import 'layout/footer';
+//
+//@import 'blocks/image-block';
+//@import 'blocks/grid-block';
+//@import 'blocks/flex-block';
+//@import 'blocks/category-preview-block';
+//@import 'blocks/warning-block';
+//@import 'blocks/article-list-block';
+
+//@import 'pages/homepage';
+//@import 'pages/default';
+//@import 'pages/article';

@@ -1,0 +1,88 @@
+
+a {
+  color: $accent;
+  text-decoration: underline;
+  text-decoration-color: transparentize($accent, .8);
+  &:hover {
+    color: $accent;
+    text-decoration: underline;
+    text-decoration-color: transparentize($accent, .1);
+  }
+}
+
+p {
+  margin: auto;
+  padding: 0 $padding 1rem;
+  max-width: $textMaxWidth;
+}
+
+h1, .h1 {
+  font-size: 3rem;
+  line-height: 120%;
+  margin: auto;
+  padding: 0 $padding 1.5rem;
+  max-width: $textMaxWidth;
+}
+
+h2, .h2 {
+  font-size: 1.8rem;
+  line-height: 120%;
+  margin: auto;
+  padding: 0 $padding 1.2rem;
+  max-width: $textMaxWidth;
+}
+
+h3, .h3 {
+  font-size: 1.4rem;
+  line-height: 120%;
+  margin: auto;
+  padding: 0 $padding 1rem;
+  max-width: $textMaxWidth;
+}
+
+h4, .h4 {
+  font-size: 1.2rem;
+  line-height: 120%;
+  margin: auto;
+  padding: 0 $padding 1rem;
+  max-width: $textMaxWidth;
+}
+
+hr {
+  padding: 0;
+  margin: $padding auto;
+  max-width: calc($pageMaxWidth - 4 * $padding);
+  border: none;
+  background: $lineColor;
+  height: 1px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+  margin-left: 0;
+}
+
+.full-width {
+  max-width: $containerMaxWidth;
+}
+
+.text-block {
+  margin: auto;
+  padding: 0 $padding 1rem;
+  max-width: $textMaxWidth;
+}
+
+
+.rating-red {
+  color: red;
+}
+.rating-green {
+  color: green;
+}
+.rating-orange {
+  color: orange;
+}

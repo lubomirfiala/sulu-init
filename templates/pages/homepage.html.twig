@@ -1,7 +1,47 @@
 {% extends "base.html.twig" %}
 
 {% block content %}
-    <h1>{{ content.title }}</h1>
+    <div class="container">
+        <p>
+            components preview, <br>
+            TODO: delete this in templates/pages/homepage.html.twig
+        </p>
+        <h1>Header 1</h1>
+        <h2>Header 2</h2>
+        <h3>Header 3</h3>
+        <h4>Header 4</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum interdum condimentum ex, et euismod enim laoreet a. Etiam rhoncus aliquam ante, at condimentum ante ultricies at. Nunc quam tellus, faucibus vitae tempus id, convallis id ante. Quisque id faucibus risus. </p>
+        <p>Curabitur convallis risus rhoncus, posuere est vitae, pretium nulla. Proin imperdiet sapien suscipit risus tempor, ac posuere ante convallis. Morbi at tempus massa. Suspendisse volutpat felis a turpis iaculis, id laoreet lacus vestibulum. Mauris nec tortor sit amet odio porttitor porttitor eu et nisi. Vivamus et venenatis libero.</p>
+
+
+        <div class="row">
+            <div class="col-12 col-tablet-6 col-desktop-4" style="border: 1px solid #00000022">
+                <p>col-12 col-tablet-6 col-desktop-4</p>
+            </div>
+            <div class="col-12 col-tablet-6 col-desktop-4" style="border: 1px solid #00000022">
+                <p>col-12 col-tablet-6 col-desktop-4</p>
+            </div>
+            <div class="col-12 col-tablet-6 col-desktop-4" style="border: 1px solid #00000022">
+                <p>col-12 col-tablet-6 col-desktop-4</p>
+            </div>
+            <div class="col-12 col-tablet-6 col-desktop-4" style="border: 1px solid #00000022">
+                <p>col-12 col-tablet-6 col-desktop-4</p>
+            </div>
+            <div class="col-12 col-desktop-8" style="border: 1px solid #00000022">
+                <p>col-12 col-desktop-8</p>
+            </div>
+        </div>
+        <div class="d-flex align-center justify-center mt-2" style="border: 1px solid #00000022">
+            <p>d-flex & buttons: </p>
+            <div class="btn">asdf</div>
+            <div class="btn outline">asdf</div>
+            <div class="btn primary outline">asdf</div>
+            <div class="btn primary">asdf</div>
+            <div class="btn primary disabled">asdf</div>
+            <div class="btn primary rounded">asdf</div>
+            <div class="btn primary circle">+</div>
+        </div>
+    </div>
 
     {{ content.article|raw }}
 {% endblock %}

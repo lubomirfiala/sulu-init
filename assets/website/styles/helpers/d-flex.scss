@@ -1,0 +1,22 @@
+.d-flex {
+  display: flex;
+  gap: $gap;
+  flex-wrap: wrap;
+  &.align-center { align-items: center; }
+  &.align-start { align-items: start; }
+  &.align-end { align-items: end; }
+  &.justify-space-between { justify-content: space-between; }
+  &.justify-center { justify-content: center; }
+  &.justify-end { justify-content: end; }
+  &.justify-start { justify-content: start; }
+  &.gap-0 {
+    gap: 0;
+  }
+  .grow-1 {
+    flex-grow: 1;
+  }
+  h1, h2, h3, h4, p {
+    padding: 0;
+    margin: 0;
+  }
+}
