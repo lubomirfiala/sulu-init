@@ -16,6 +16,28 @@
         </options>
     </format>
 
+    <format key="article">
+        <meta>
+            <title lang="en">article</title>
+        </meta>
+        <scale x="600" y="600" mode="inset" />
+        <options>
+            <option name="jpeg_quality">60</option>
+            <option name="webp_quality">50</option>
+        </options>
+    </format>
+
+    <format key="site-width">
+        <meta>
+            <title lang="en">article</title>
+        </meta>
+        <scale x="1200" mode="inset" />
+        <options>
+            <option name="jpeg_quality">60</option>
+            <option name="webp_quality">50</option>
+        </options>
+    </format>
+
     <format key="open-graph-overlay">
         <meta>
             <title lang="en">open-graph-overlay</title>

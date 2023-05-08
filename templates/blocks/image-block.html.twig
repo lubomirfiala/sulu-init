@@ -4,15 +4,17 @@
   >
     {% if 'svg' in data.image.fileVersion.mimeType %}
       <img
-          src="{{ data.image.thumbnails['full'] }}"
+          src="{{ data.image.thumbnails['site-width'] }}"
           alt="{{ data.image.title }}"
           title="{{ data.image.description|default(data.image.title) }}"
+          data-gallery="{{ data.image.thumbnails['full'] }}"
       />
     {% else %}
       <img
-          src="{{ data.image.thumbnails['full.webp'] }}"
+          src="{{ data.image.thumbnails['site-width.webp'] }}"
           alt="{{ data.image.title }}"
           title="{{ data.image.description|default(data.image.title) }}"
+          data-gallery="{{ data.image.thumbnails['full'] }}"
       />
     {% endif %}
   </div>

@@ -4,15 +4,17 @@
     {% for image in data.images %}
       {% if 'svg' in image.fileVersion.mimeType %}
         <img
-            src="{{ image.thumbnails['full'] }}"
+            src="{{ image.thumbnails['article'] }}"
             alt="{{ image.title }}"
             title="{{ image.description|default(image.title) }}"
+            data-gallery="{{ image.thumbnails['full'] }}"
         />
       {% else %}
         <img
-            src="{{ image.thumbnails['full.webp'] }}"
+            src="{{ image.thumbnails['article.webp'] }}"
             alt="{{ image.title }}"
             title="{{ image.description|default(image.title) }}"
+            data-gallery="{{ image.thumbnails['full.webp'] }}"
         />
       {% endif %}
     {% endfor %}
