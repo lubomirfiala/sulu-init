@@ -12,7 +12,7 @@ services:
       MYSQL_ROOT_PASSWORD: secret
       MYSQL_ROOT_HOST: '%'
     volumes:
-      - ./volumes/mysql/var/lib/mysql
+      - ./volumes/mysql:/var/lib/mysql
 
   app_node:
     container_name: app_node
@@ -26,7 +26,7 @@ services:
     volumes:
       - .:/srv:rw
 
-  sulu_app:
+  app:
     container_name: app
     restart: always
     #    networks:
@@ -39,6 +39,8 @@ services:
       - .:/srv:rw
     depends_on:
       - mysql
+    ports:
+      - 8000:80
     environment:
       DATABASE_URL: mysql://root:secret@mysql:3306/app
       APP_ENV: dev
