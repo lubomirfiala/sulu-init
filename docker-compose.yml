@@ -1,22 +1,51 @@
-version: '3'
+version: "3.4"
 
 services:
-###> doctrine/doctrine-bundle ###
-  database:
-    # arm compatible mysql docker image
-    image: mysql/mysql-server:${MYSQL_VERSION:-8.0} # arm and x86/x64 compatible mysql image
+
+  mysql:
+    container_name: mysql
+    image: mysql/mysql-server:8.0
+    #    networks:
+    #      renameThisNetwork:
+    #        ipv4_address: 172.42.1.2
     environment:
-      MYSQL_DATABASE: ${MYSQL_DATABASE:-su_myapp}
-      # You should definitely change the password in production
-      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:-ChangeMe}
+      MYSQL_ROOT_PASSWORD: secret
       MYSQL_ROOT_HOST: '%'
     volumes:
-      - db-data:/var/lib/mysql
-      # You may use a bind-mounted host directory instead, so that it is harder to accidentally remove the volume and lose all your data!
-      # - ./docker/db/data:/var/lib/mysql:rw
-###< doctrine/doctrine-bundle ###
+      - ./volumes/mysql/var/lib/mysql
 
-volumes:
-###> doctrine/doctrine-bundle ###
-  db-data:
-###< doctrine/doctrine-bundle ###
+  app_node:
+    container_name: app_node
+    restart: always
+    #    networks:
+    #      renameThisNetwork:
+    #        ipv4_address: 172.42.1.20
+    build:
+      context: .
+      target: app-node
+    volumes:
+      - .:/srv:rw
+
+  sulu_app:
+    container_name: app
+    restart: always
+    #    networks:
+    #      renameThisNetwork:
+    #        ipv4_address: 172.42.1.21
+    build:
+      context: .
+      target: app
+    volumes:
+      - .:/srv:rw
+    depends_on:
+      - mysql
+    environment:
+      DATABASE_URL: mysql://root:secret@mysql:3306/app
+      APP_ENV: dev
+
+#networks:
+#  renameThisNetwork:
+#    ipam:
+#      driver: default
+#      config:
+#        - subnet: "172.42.0.0/16"
