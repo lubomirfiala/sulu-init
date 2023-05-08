@@ -31,6 +31,8 @@ Preconfigured [Sulu](https://sulu.io) installation for a quicker start of new pr
 page-list service is meant to be used for page lists or page-based blogs/news. This setup can run on shared webhosting. If you need full-featured article service, please use [sulu/SuluArticleBundle](https://github.com/sulu/SuluArticleBundle)
 
 ### Backlog
+- Coding standarts
+- Makefile
 - Vue search modal
 - open graph tags
 - 
