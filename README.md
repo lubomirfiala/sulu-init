@@ -7,6 +7,7 @@ Preconfigured [Sulu](https://sulu.io) installation for a quicker start of new pr
 - rename default webspace
 - `docker-compose build` && `docker-compose up`
 - `docker exec -it app sh` && `bin/console sulu:build dev`
+- remove and change everything you don't need
 
 ## Features
 - preconfigured docker dev enviroment
