@@ -5,20 +5,38 @@
 
     <!-- See: http://docs.sulu.io/en/latest/book/image-formats.html how to define image-formats -->
 
-    <!--
-    <format key="300x">
+    <format key="full">
         <meta>
-            <title lang="en">Example Image</title>
-            <title lang="de">Beispielbild</title>
+            <title lang="en">full</title>
         </meta>
-
-        <scale x="300"/>
+        <scale x="2000" y="2000" mode="inset" />
+        <options>
+            <option name="jpeg_quality">60</option>
+            <option name="webp_quality">50</option>
+        </options>
     </format>
-    -->
 
-    <!--
-    Render an image from the media_selection in a specific format the following way:
+    <format key="open-graph-overlay">
+        <meta>
+            <title lang="en">open-graph-overlay</title>
+        </meta>
+        <scale x="1200" y="630"/>
+        <transformations>
+            <transformation>
+                <effect>paste</effect>
+                <parameters>
+                    <parameter name="image">%kernel.project_dir%/assets/website/img/og_overlay.png</parameter>
+                    <parameter name="x">0</parameter>
+                    <parameter name="y">0</parameter>
+                    <parameter name="w">1200</parameter>
+                    <parameter name="h">630</parameter>
+                </parameters>
+            </transformation>
+        </transformations>
+        <options>
+            <option name="jpeg_quality">60</option>
+            <option name="webp_quality">70</option>
+        </options>
+    </format>
 
-    <img src="{{ image.thumbnails['300x'] }}" alt="{{ image.title }}" title="{{ image.description|default(image.title) }}">
-    -->
 </formats>

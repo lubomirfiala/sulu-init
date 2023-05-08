@@ -8,7 +8,7 @@ menuToggle.addEventListener('click', (event) => {
 
 document.addEventListener('scroll', (event) => {
   const headerPosition = headerWrapper.getBoundingClientRect();
-  if (headerPosition.y <= -14) {
+  if (headerPosition.y <= 0) {
     header.classList.add('fixed');
   } else {
     header.classList.remove('fixed');

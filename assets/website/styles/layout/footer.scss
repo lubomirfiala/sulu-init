@@ -16,14 +16,8 @@ footer {
       grid-template-columns: 1fr;
       gap: 1rem;
       .logo {
-        height: 3rem;
         width: 15rem;
         justify-self: start;
-        border-radius: 1rem;
-        background: $accentTextColor;
-        color: $accent;
-        line-height: 3rem;
-        text-align: center;
       }
       .menu-1 {
       }
