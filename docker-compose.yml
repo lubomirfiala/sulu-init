@@ -22,7 +22,7 @@ services:
     #        ipv4_address: 172.42.1.20
     build:
       context: .
-      target: app-node
+      target: app_node
     volumes:
       - .:/srv:rw
 

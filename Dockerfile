@@ -133,7 +133,7 @@ ENTRYPOINT ["/usr/local/bin/entrypoint"]
 
 
 # STAGE 5: run yarn watch
-FROM node:18.15.0-alpine as app-node
+FROM node:18.15.0-alpine as app_node
 WORKDIR /srv
 
 COPY --from=node-build /srv/ /srv/
