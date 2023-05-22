@@ -12,9 +12,8 @@ RUN apt-get update && \
         git \
         unzip \
         inkscape \
-        curl
-
-RUN apt-get clean && \
+        curl && \
+    apt-get clean && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 RUN docker-php-ext-configure \
@@ -48,65 +47,57 @@ RUN echo "short_open_tag = off" >> /usr/local/etc/php/php.ini && \
     a2enmod rewrite && \
     a2enmod expires
 
-#RUN curl -sL https://deb.nodesource.com/setup_18.x | bash -
-#RUN apt-get install -y nodejs
-#
-#RUN npm install --global yarn
-
 COPY --from=composer:2.4 /usr/bin/composer /usr/bin/composer
 
 
 
+# STAGE 2: install node dependencies and build assets
+FROM node:18.15.0-alpine as app_node
+WORKDIR /srv
+
+COPY ./package*.json ./
+COPY ./yarn.lock ./
+COPY ./webpack.config.js ./
+
+RUN yarn install
+
+COPY ./assets assets/
+
+RUN mkdir public && \
+    yarn build
+
+# Prepare entrypoint for building assets in real time
+# This should be used only in dev environment
+COPY ./docker/node_entrypoint.sh /usr/local/bin/entrypoint
+RUN chmod +x /usr/local/bin/entrypoint
+ENTRYPOINT ["entrypoint"]
+CMD ["yarn", "watch"]
+
+
+
 # STAGE 2: install composer dependencies and copy files
-FROM apache_base AS composer-install
+FROM apache_base AS app
 WORKDIR /srv
 
 # Install composer dependencies
-# Prevent the reinstallation of vendors at every changes in the source code
+# Performa the installation before most files are copied over to prevent running this step every time a source code file changes
 ENV COMPOSER_ALLOW_SUPERUSER=1
 COPY ./composer.json composer.lock symfony.lock ./
 RUN set -eux; \
 	composer install --prefer-dist --no-dev --no-scripts --no-progress; \
 	composer clear-cache
 
-RUN mkdir public
-
 # Copy only specifically what we need
 COPY ./.env ./
 COPY ./bin bin/
 COPY ./config config/
-#COPY migrations migrations/
 COPY ./public public/
 COPY ./src src/
 COPY ./templates templates/
 COPY ./translations translations/
-COPY ./assets assets/
-#COPY ./.eslintrc.js ./
-COPY ./package*.json ./
-COPY ./yarn.lock ./
-COPY ./webpack.config.js ./
 
-
-
-# STAGE 3: build assets with yarn
-FROM node:18.15.0-alpine as node-build
-WORKDIR /srv
-
-COPY --from=composer-install /srv/ /srv/
-
-RUN yarn install
-
-# Build assets
-RUN yarn build
-
-
-# STAGE 4: make running container
-FROM apache_base AS app
-WORKDIR /srv
-
-COPY --from=node-build /srv/ /srv/
-
-ENV COMPOSER_ALLOW_SUPERUSER=1
+# Copy assets built in app_node stage
+COPY --from=app_node /srv/public/build/website /srv/public/build/website/
 
 RUN set -eux; \
 	mkdir -p /srv/var/cache; \
@@ -118,8 +109,6 @@ RUN set -eux; \
 	chmod +x bin/console; sync
 VOLUME /srv/var
 
-# Make sure apache user owns all relevant files
-RUN chown -R www-data:www-data /srv
 RUN rm /srv/.env.local.php
 
 # Copy apache config
@@ -129,17 +118,3 @@ COPY ./docker/apache-prod.conf /etc/apache2/sites-enabled/000-default.conf
 COPY ./docker/entrypoint.sh /usr/local/bin/entrypoint
 RUN chmod +x /usr/local/bin/entrypoint
 ENTRYPOINT ["/usr/local/bin/entrypoint"]
-
-
-
-# STAGE 5: run yarn watch
-FROM node:18.15.0-alpine as app_node
-WORKDIR /srv
-
-COPY --from=node-build /srv/ /srv/
-
-# Prepare entrypoint for building assets in real time
-COPY ./docker/node_entrypoint.sh /usr/local/bin/entrypoint
-RUN chmod +x /usr/local/bin/entrypoint
-ENTRYPOINT ["entrypoint"]
-CMD ["yarn", "watch"]
