@@ -30,10 +30,11 @@ class PageController extends DefaultController
             ->pageContentService->forEachBlockOfType(
                 $attributes['content']['content'],
                 'page-list-block',
-                function($block) {
+                function($block) use ($attributes) {
 
                     // load all pages under parent and filter by template
-                    $pages = $this->pageListService->loadPages($block['parent']);
+                    $parent = ($block['parent']) ? $block['parent'] : $attributes['uuid'];
+                    $pages = $this->pageListService->loadPages($parent);
                     $pageList = new PageList($pages);
                     $pageList = $pageList
                         ->filterByTemplates([$block['template']])

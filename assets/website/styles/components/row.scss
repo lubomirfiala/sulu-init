@@ -4,9 +4,12 @@
   &.align-center { align-items: center; }
   &.align-start { align-items: start; }
   &.align-end { align-items: end; }
+  &.align-strech { align-items: stretch; }
 
   gap: $gap;
   &.gap-0 { gap: 0; }
+  &.gap-3 { gap: $gap; }
+  &.gap-5 { gap: $gap; }
 
   * {
     grid-column: auto / span 12;
@@ -61,6 +64,8 @@
     .order-tablet-10 { order: 10; }
     .order-tablet-11 { order: 11; }
     .order-tablet-12 { order: 12; }
+    &.gap-3 { gap: 3rem; }
+    &.gap-5 { gap: 3rem; }
   }
 
   @media (min-width: $desktop) {
@@ -88,5 +93,6 @@
     .order-desktop-10 { order: 10; }
     .order-desktop-11 { order: 11; }
     .order-desktop-12 { order: 12; }
+    &.gap-5 { gap: 5rem; }
   }
 }

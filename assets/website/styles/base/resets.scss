@@ -1,5 +1,4 @@
 html, body, p, h1, h2, h3, h4, h5 {
-  font-size: 14px;
   line-height: 130%;
   margin: 0;
   padding: 0;
@@ -13,6 +12,7 @@ body {
   color: $textColor;
   background: $background;
   min-height: 100vh;
+  font-size: .8rem;
 }
 
 * {

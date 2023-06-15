@@ -17,12 +17,24 @@
                     <property name="align" type="single_select" colspan="4">
                         <meta><title lang="en">align - vertical</title></meta>
                         <params>
-                            <param name="default_value" value="center"/>
+                            <param name="default_value" value="align-center"/>
                             <param name="values" type="collection">
-                                <param name="center"><meta><title lang="en">center</title></meta></param>
-                                <param name="strech"><meta><title lang="en">strech</title></meta></param>
-                                <param name="start"><meta><title lang="en">start</title></meta></param>
-                                <param name="end"><meta><title lang="en">end</title></meta></param>
+                                <param name="align-center"><meta><title lang="en">center</title></meta></param>
+                                <param name="align-strech"><meta><title lang="en">strech</title></meta></param>
+                                <param name="align-start"><meta><title lang="en">start</title></meta></param>
+                                <param name="align-end"><meta><title lang="en">end</title></meta></param>
+                            </param>
+                        </params>
+                    </property>
+                    <property name="gap" type="single_select" colspan="4">
+                        <meta><title lang="en">gap</title></meta>
+                        <params>
+                            <param name="default_value" value="gap-1"/>
+                            <param name="values" type="collection">
+                                <param name="gap-1"><meta><title lang="en">default</title></meta></param>
+                                <param name="gap-0"><meta><title lang="en">gap 0</title></meta></param>
+                                <param name="gap-3"><meta><title lang="en">gap 3</title></meta></param>
+                                <param name="gap-5"><meta><title lang="en">gap 5</title></meta></param>
                             </param>
                         </params>
                     </property>
