@@ -76,6 +76,10 @@ hr {
   max-width: $textMaxWidth;
 }
 
+.strong, strong {
+  font-weight: 700;
+}
+
 
 .rating-red {
   color: red;

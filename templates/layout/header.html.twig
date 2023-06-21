@@ -11,7 +11,7 @@
           <a href="#" class="link">link</a>
           {% set navigationHeader = sulu_navigation_root_flat('header') %}
           {% for link in navigationHeader %}
-            <a href="{{ link.url }}" class="link">{{ link.title }}</a>
+            <sulu-link href="{{ link.uuid }}" class="link">{{ link.title }}</sulu-link>
           {% endfor %}
         </nav>
         <div class="actions">
